@@ -1,0 +1,21 @@
+appdirs==1.4.4
+certifi==2020.6.20
+chardet==3.0.4
+click==6.7
+fasteners==0.15
+Flask==1.1.2
+future==0.18.2
+geojson==2.5.0
+idna==2.9
+itsdangerous==1.1.0
+Jinja2==2.11.2
+MarkupSafe==1.1.1
+monotonic==1.5
+osm2geojson==0.1.27
+overpass==0.7
+requests==2.24.0
+Shapely @ file:///C:/Users/wjf46/PycharmProjects/CUBE-Server/Shapely-1.7.0-cp38-cp38-win_amd64.whl
+six==1.15.0
+urllib3==1.25.9
+Werkzeug==1.0.1
+wincertstore==0.2
