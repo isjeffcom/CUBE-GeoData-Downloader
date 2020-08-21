@@ -1,2 +1,3 @@
-# CUBE-DATA-VISUALIZATION-MIDDLEWARE
-The middleware server for CUBE data visualization
+# CUBE-GeoData-Downloader
+Flask app start in index.py
+Required modules is in requirement.txt
