@@ -85,7 +85,7 @@ class pm:
             else:
                 return {"status": False, "message": f"Fail to add {name} project"}
 
-    # Test Later
+    # Delete project
     def delete(self, name):
         if not name:
             return {"status": False, "message": "No Project Name Imported"}
@@ -115,7 +115,6 @@ class pm:
 
         i = 0
         for item in self.content['projects']:
-            print(item['name'], name)
             if item['name'] == name:
                 return i
             i = i + 1
@@ -177,7 +176,6 @@ def check_name(name):
         return True
 
     for item in content['projects']:
-        print(item)
         if item['name'] == name:
             return False
 

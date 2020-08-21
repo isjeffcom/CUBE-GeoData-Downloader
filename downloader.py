@@ -1,10 +1,8 @@
 import requests
 import codecs
 import osm2geojson
-# from geojson import dump
 import json
 import os
-# import overpass
 from urllib.parse import quote
 
 BASE_DEM = 'https://portal.opentopography.org/API/globaldem'
@@ -50,7 +48,6 @@ def OverpassJSON(config, ret_format, req_type, pname):
     url = constOverpassQL(BASE_OVERPASS, ret_format, 30, req_type, config['bbox'])
 
     req = requests.get(url)
-    print(url)
 
     if req.status_code == 200:
         cache_path = cwd + f'/assets/projects/{pname}/{req_type}'

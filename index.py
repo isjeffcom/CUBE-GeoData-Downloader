@@ -45,12 +45,24 @@ CORS(app)
 
 @app.route('/')
 def main():
-    return "hello world"
+    return app.send_static_file("./manager/index.html")
 
 @app.route('/all')
 def all():
     p = pm()
     return json.dumps(pm.all(p))
+
+@app.route('/del', methods=['GET', 'POST'])
+def del_project():
+    data = request.json
+    name = data.get('name')
+    pm_ins = pm()
+    pm_res = pm.delete(pm_ins, name)
+    if pm_res['status']:
+        return json.dumps({"status": True, "message": f"Project {name} deleted, please delete file manually"})
+    else:
+        return json.dumps({"status": False, "message": f"Fail to delete project {name}"})
+
 
 @app.route('/new', methods=['GET', 'POST'])
 def new_project():
@@ -106,7 +118,6 @@ def new_project():
     else:
         return json.dumps({"status": False,
                            "message": f"Fail to create project, Errors: {dem_res['message']} \n {building_res['message']} \n {water_res['message']} \n {highway_res['message']}"})
-
 
 @app.route('/single')
 def single():
