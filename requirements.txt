@@ -16,6 +16,6 @@ overpass==0.7
 requests==2.24.0
 Shapely @ file:///C:/Users/wjf46/PycharmProjects/CUBE-Server/Shapely-1.7.0-cp38-cp38-win_amd64.whl
 six==1.15.0
-urllib3==1.25.9
+urllib3==1.26.5
 Werkzeug==1.0.1
 wincertstore==0.2
